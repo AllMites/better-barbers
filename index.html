@@ -75,13 +75,14 @@
                 url: null
             },
             hero: {
+                businessName: "Better Barbers",
                 tagline: "One of the best and most popular barber shops in Paranaque City",
                 backgroundImage: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSmOfdazGeQHfHB-68vlueBv9rbacH05OYvseNblA63h5L9Ki8A-5jrlUTXSKWrX7RNMqZS0qFhf32SOOeOf4UPRnsCO88K5kX_IDRPN-0bKaJNhDWyDfa9KJE1bvyyt8SKpY3aA=w800-h600-k-no",
                 ctaText: "Walk-ins Welcome"
             },
             services: [
-                { icon: "💈", name: "Haircut", desc: "Professional haircut with consultation", price: "[placeholder]" },
-                { icon: "🪒", name: "Haircut & Shave", desc: "Full haircut with straight razor shave", price: "[placeholder]" },
+                { icon: "💈", name: "Haircut", desc: "Professional haircut with consultation", price: "₱150" },
+                { icon: "🪒", name: "Haircut & Shave", desc: "Full haircut with straight razor shave", price: "₱300" },
                 { icon: "💆", name: "Post-Haircut Massage", desc: "Complimentary shoulder and neck massage after every haircut", price: "Free" },
                 { icon: "☕", name: "Free Coffee", desc: "Complimentary brewed coffee for all customers", price: "Free" },
                 { icon: "✂️", name: "Kid's Haircut", desc: "Simple and stylish haircuts for children", price: "₱120" },
@@ -90,20 +91,20 @@
             about: {
                 text: "Classic barbershop on Doña Soledad Avenue with nostalgic ambiance, relaxing soft music, comfy waiting lounge, professional barbers, and complimentary massage after haircut. Serves free brewed coffee to customers.",
                 yearsInBusiness: "Parañaque Local",
-                image: "https://placehold.co/800x1000/1E1B18/F3EEE8?text=Better+Barbers+Interior"
+                image: "https://images.unsplash.com/photo-1585747861115-6bc0b31ba1ed?w=800&h=1000&fit=crop"
             },
             barbers: [
-                { name: "Our Barber", specialty: "Classic Cuts & Shaves", image: "https://placehold.co/400x500/1E1B18/F3EEE8?text=Our+Barber" },
-                { name: "Our Barber", specialty: "Modern Fades & Grooming", image: "https://placehold.co/400x500/1E1B18/F3EEE8?text=Our+Barber" },
-                { name: "Our Barber", specialty: "Kids Cuts & Styling", image: "https://placehold.co/400x500/1E1B18/F3EEE8?text=Our+Barber" }
+                { name: "Mang Rudy", specialty: "Classic Cuts & Shaves", image: "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=400&h=500&fit=crop" },
+                { name: "Kuya Jun", specialty: "Modern Fades & Grooming", image: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=400&h=500&fit=crop" },
+                { name: "Boyet", specialty: "Kids Cuts & Styling", image: "https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=400&h=500&fit=crop" }
             ],
             gallery: [
                 "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSmOfdazGeQHfHB-68vlueBv9rbacH05OYvseNblA63h5L9Ki8A-5jrlUTXSKWrX7RNMqZS0qFhf32SOOeOf4UPRnsCO88K5kX_IDRPN-0bKaJNhDWyDfa9KJE1bvyyt8SKpY3aA=w408-h306-k-no",
-                "https://placehold.co/600x600/1E1B18/F3EEE8?text=Interior+2",
-                "https://placehold.co/600x600/1E1B18/F3EEE8?text=Interior+3",
-                "https://placehold.co/600x600/1E1B18/F3EEE8?text=Barber+Chair",
-                "https://placehold.co/600x600/1E1B18/F3EEE8?text=Waiting+Area",
-                "https://placehold.co/600x600/1E1B18/F3EEE8?text=Storefront"
+                "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1585747861115-6bc0b31ba1ed?w=600&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1621605815971-f11498e13fcc?w=600&h=600&fit=crop"
             ],
             galleryLabels: [
                 "Interior",
@@ -1280,13 +1281,6 @@
             const heroEl = document.getElementById('hero');
             heroEl.style.backgroundImage = `url('${conf.hero.backgroundImage}')`;
             document.getElementById('dom-hero-title').textContent = conf.hero.businessName;
-            // Time-aware greeting
-            const hour = new Date().getHours();
-            let greeting = "";
-            if (hour < 12) greeting = "Good Morning";
-            else if (hour < 17) greeting = "Good Afternoon";
-            else greeting = "Good Evening";
-            document.getElementById("dom-hero-title").textContent = greeting + ". " + document.getElementById("dom-hero-title").textContent;
             document.getElementById('dom-hero-tagline').textContent = conf.hero.tagline;
             document.getElementById('dom-hero-cta').textContent = conf.hero.ctaText;
 
